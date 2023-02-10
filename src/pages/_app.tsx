@@ -1,18 +1,8 @@
 import React from 'react';
 import Head from 'next/head'
 import type { AppProps } from 'next/app'
-import { Raleway } from '@next/font/google';
-import { Caveat } from '@next/font/google';
-import { Poppins } from '@next/font/google';
 import CssBaseline from '@mui/material/CssBaseline';
-import { ThemeProvider } from '@mui/system';
-import { theme } from '@/styles/theme';
-
-export const raleway = Raleway({subsets:['latin']})
-
-export const caveat = Caveat({subsets:['latin']})
-
-export const poppins = Poppins({subsets:['latin'], weight:"400"})
+import { ThemeProvider } from '../styles/ThemeProvider';
 
 export default function App({ Component, pageProps }: AppProps) {
 
@@ -34,9 +24,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <ThemeProvider theme={theme}>
+      <ThemeProvider>
+        <>
         <CssBaseline/>
         <Component {...pageProps} />
+        </>
       </ThemeProvider>
     </>
   )
