@@ -12,21 +12,21 @@ import logo from '../../public/Logo.png';
 const StyledAppBar = styled(AppBar)`
   background-colour: ${(p) => p.theme.palette.primary.main };
 `
-const LogoDiv = styled.div`
-  padding-left: ${(p) => p.theme.spacing(2)}
-`
 export default function NavBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <StyledAppBar position="static">
-        <LogoDiv>
+        <Toolbar>
+        <div style={{flexGrow: 1}}>
           <Image 
             src={logo}
             alt="Logo"
-            width={100}
-            height={100}
+            width={300}
+            style={{paddingTop: 2}}
           />
-        </LogoDiv>
+        </div>
+        <Button color='inherit' variant='contained' disableElevation>Contact Us</Button>
+        </Toolbar>
       </StyledAppBar>
     </Box>
   );
