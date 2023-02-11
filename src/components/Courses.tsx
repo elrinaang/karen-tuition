@@ -3,7 +3,8 @@ import styled from '@emotion/styled';
 import Typography from '@mui/material/Typography';
 
 const MainDiv = styled.div`
-    padding: ${(p) => p.theme.spacing(3)}
+    padding: ${(p) => p.theme.spacing(3)};
+    height: 50vh
 ` 
 
 const StyledHeader = styled(Typography)`
@@ -14,7 +15,7 @@ font-size: x-large;
 export default function Courses() {
     return (
         <MainDiv>
-            <StyledHeader>What Classes do Teacher Karen Teach?</StyledHeader>
+            <StyledHeader>What Classes Do Teacher Karen Conduct?</StyledHeader>
         </MainDiv>
     );
 }

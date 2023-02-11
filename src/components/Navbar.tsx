@@ -4,8 +4,6 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import styled from '@emotion/styled';
 import logo from '../../public/Logo.png';
 
@@ -14,19 +12,21 @@ const StyledAppBar = styled(AppBar)`
 `
 export default function NavBar() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <StyledAppBar position="static">
-        <Toolbar>
-        <div style={{flexGrow: 1}}>
-          <Image 
-            src={logo}
-            alt="Logo"
-            width={300}
-            style={{paddingTop: 2}}
-          />
+    <Box>
+      <StyledAppBar position="fixed" elevation={0} >
+      <Toolbar>
+        <div style={{flexGrow: '1'}}>
+        <div style={{width: '25vw', height: '6vh', position:'relative'}}>
+        <Image 
+          src={logo}
+          alt="Logo"
+          fill
+        />
+      </div>
         </div>
-        <Button color='inherit' variant='contained' disableElevation>Contact Us</Button>
-        </Toolbar>
+      
+      <Button color='inherit' variant='contained' disableElevation>Contact Us</Button>
+      </Toolbar>
       </StyledAppBar>
     </Box>
   );

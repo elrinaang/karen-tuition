@@ -3,7 +3,8 @@ import styled from '@emotion/styled';
 import Typography from '@mui/material/Typography';
 
 const MainDiv = styled.div`
-    padding: ${(p) => p.theme.spacing(3)}
+    padding: ${(p) => p.theme.spacing(3)};
+    height: 50vh
 ` 
 
 const StyledHeader = styled(Typography)`
